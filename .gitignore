@@ -14,6 +14,7 @@ __pycache__/
 # OS files
 .DS_Store
 Thumbs.db
+.sync.ffs_db
 
 # Arquivos temporários
 *.tmp
