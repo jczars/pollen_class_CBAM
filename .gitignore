@@ -26,3 +26,8 @@ echo "*.log" >> .gitignore
 
 #BD
 BD
+
+#Results
+results/phase1/reports_cr/0_MobileNet_sem_BI_5/models
+results/phase1/reports_cr/1_DenseNet201_sem_BI_5/models
+results/phase1/reports_cr/2_InceptionV3_sem_BI_5/models
