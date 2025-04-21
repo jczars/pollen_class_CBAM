@@ -1,0 +1,10 @@
+,file,y_true,y_pred,confidence,true_label,predicted_label,status
+18,BD/BI_Cr_5/labels/equatorial_alongada/Api.F.comX400wF(2135)(0)A-4.png,0,1,0.65765774,equatorial_alongada,equatorial_circular,Incorrect
+47,BD/BI_Cr_5/labels/equatorial_circular/Lam.S.thyX400wF(944)(940)E-1.png,1,3,0.99996734,equatorial_circular,polar_circular,Incorrect
+62,BD/BI_Cr_5/labels/polar_circular/Lam.O.micX400wF(887)(0)D-6.png,3,1,0.86070764,polar_circular,equatorial_circular,Incorrect
+73,BD/BI_Cr_5/labels/equatorial_circular/Lam.T.capX400wF(1032)(0)D-7.png,1,3,0.9614141,equatorial_circular,polar_circular,Incorrect
+74,BD/BI_Cr_5/labels/equatorial_alongada/Fag.C.satX400wF(781)(0)A-23.png,0,1,0.8050212,equatorial_alongada,equatorial_circular,Incorrect
+75,BD/BI_Cr_5/labels/polar_circular/Oxa.O.pes.cX400wF(1738)(0)F-15.png,3,1,0.8535142,polar_circular,equatorial_circular,Incorrect
+80,BD/BI_Cr_5/labels/equatorial_circular/Lam.S.thyX400wF(944)(940)E-23.png,1,3,0.9516708,equatorial_circular,polar_circular,Incorrect
+110,BD/BI_Cr_5/labels/equatorial_circular/Lam.T.capX400wF(1031)(0)C-8.png,1,3,0.9771338,equatorial_circular,polar_circular,Incorrect
+116,BD/BI_Cr_5/labels/equatorial_alongada/Fag.C.satX400wF(783)(0)C-11.png,0,1,0.9835368,equatorial_alongada,equatorial_circular,Incorrect

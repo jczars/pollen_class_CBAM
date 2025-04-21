@@ -1,0 +1,53 @@
+file,labels,confidence
+BD/BI_Cr_5/images_unlabels/unlabels/Ana.P.tereX400wF(3224)(0)C-10.png,polar_circular,0.73157454
+BD/BI_Cr_5/images_unlabels/unlabels/Ana.P.tereX400wF(3226)(0)E-9.png,equatorial_circular,0.48322704
+BD/BI_Cr_5/images_unlabels/unlabels/Api.F.comX400wF(2138)(0)D-9.png,equatorial_alongada,0.610511
+BD/BI_Cr_5/images_unlabels/unlabels/Api.F.comX400wF(2139)(0)E-3.png,equatorial_alongada,0.62937486
+BD/BI_Cr_5/images_unlabels/unlabels/Asp.U.marX400wF(5317)(0)A-19.png,equatorial_circular,0.66559047
+BD/BI_Cr_5/images_unlabels/unlabels/Bra.S.albX400wF(2152)(0)C-11.png,equatorial_circular,0.81601346
+BD/BI_Cr_5/images_unlabels/unlabels/Bra.S.albX400wF(2152)(0)C-8.png,equatorial_alongada,0.6224941
+BD/BI_Cr_5/images_unlabels/unlabels/Bra.S.albX400wF(2153)(0)D-21.png,equatorial_circular,0.5074618
+BD/BI_Cr_5/images_unlabels/unlabels/Bra.S.albX400wF(2154)(0)E-21.png,equatorial_circular,0.92339563
+BD/BI_Cr_5/images_unlabels/unlabels/Eri.E.maniX400wF(5355)(0)A-10.png,equatorial_circular,0.7559545
+BD/BI_Cr_5/images_unlabels/unlabels/Eri.E.maniX400wF(5356)(0)B-12.png,equatorial_alongada,0.6930946
+BD/BI_Cr_5/images_unlabels/unlabels/Eri.E.maniX400wF(5358)(0)D-4.png,equatorial_alongada,0.7158378
+BD/BI_Cr_5/images_unlabels/unlabels/Fab.C.silX400wF(475)(0)A-15.png,polar_triangular,0.8430379
+BD/BI_Cr_5/images_unlabels/unlabels/Fab.C.silX400wF(476)(0)B-1.png,equatorial_circular,0.5420239
+BD/BI_Cr_5/images_unlabels/unlabels/Fab.C.silX400wF(479)(0)E-14.png,polar_triangular,0.90087545
+BD/BI_Cr_5/images_unlabels/unlabels/Fab.C.silX400wF(480)(0)F-10.png,polar_triangular,0.70319635
+BD/BI_Cr_5/images_unlabels/unlabels/Fab.C.vilX400wF(2018)(0)C-7.png,polar_triangular,0.8272778
+BD/BI_Cr_5/images_unlabels/unlabels/Fab.C.vilX400wF(2019)(0)D-16.png,equatorial_alongada,0.9260891
+BD/BI_Cr_5/images_unlabels/unlabels/Fab.C.vilX400wF(2019)(0)D-76.png,equatorial_alongada,0.82735085
+BD/BI_Cr_5/images_unlabels/unlabels/Fag.C.satX400wF(782)(0)B-10.png,equatorial_alongada,0.62846243
+BD/BI_Cr_5/images_unlabels/unlabels/IMG_3708-8.png,equatorial_circular,0.909293
+BD/BI_Cr_5/images_unlabels/unlabels/Lam.O.micX400wF(889)(0)F-15.png,equatorial_circular,0.9212226
+BD/BI_Cr_5/images_unlabels/unlabels/Lam.O.micX400wF(889)(0)F-18.png,equatorial_circular,0.7716656
+BD/BI_Cr_5/images_unlabels/unlabels/Lam.O.micX400wF(889)(0)F-20.png,equatorial_circular,0.82797885
+BD/BI_Cr_5/images_unlabels/unlabels/Lam.O.micX400wF(889)(0)F-46.png,polar_triangular,0.6605227
+BD/BI_Cr_5/images_unlabels/unlabels/Lam.S.thyX400wF(947)(0)H-4.png,equatorial_alongada,0.9400111
+BD/BI_Cr_5/images_unlabels/unlabels/Lam.S.triX400wF(2189)(0)B-31.png,equatorial_circular,0.9270776
+BD/BI_Cr_5/images_unlabels/unlabels/Lam.S.triX400wF(2189)(0)B-34.png,equatorial_circular,0.87684596
+BD/BI_Cr_5/images_unlabels/unlabels/Lam.S.triX400wF(2189)(0)B-52.png,equatorial_circular,0.8346142
+BD/BI_Cr_5/images_unlabels/unlabels/Lam.S.triX400wF(2190)(0)C-27.png,equatorial_circular,0.79904747
+BD/BI_Cr_5/images_unlabels/unlabels/Ole.O.euroX400wF(4262)(0)B-11.png,equatorial_alongada,0.51766366
+BD/BI_Cr_5/images_unlabels/unlabels/Ole.O.euroX400wF(4263)(0)C-147.png,equatorial_circular,0.93498814
+BD/BI_Cr_5/images_unlabels/unlabels/Ole.O.euroX400wF(4263)(0)C-181.png,equatorial_alongada,0.6929447
+BD/BI_Cr_5/images_unlabels/unlabels/Oxa.O.pes.cX400wF(1733)(0)A-10.png,polar_circular,0.48112464
+BD/BI_Cr_5/images_unlabels/unlabels/Oxa.O.pes.cX400wF(1738)(0)F-2.png,equatorial_alongada,0.82482094
+BD/BI_Cr_5/images_unlabels/unlabels/Oxa.O.pes.cX400wF(1739)(0)G-9.png,equatorial_circular,0.94053763
+BD/BI_Cr_5/images_unlabels/unlabels/Oxa.O.pes.cX400wF(1740)(0)H-2.png,equatorial_circular,0.81755555
+BD/BI_Cr_5/images_unlabels/unlabels/Oxa.O.pes.cX400wF(1743)(0)K-14.png,equatorial_circular,0.69820476
+BD/BI_Cr_5/images_unlabels/unlabels/Oxa.O.pes.cX400wF(1743)(0)K-24.png,polar_circular,0.48962602
+BD/BI_Cr_5/images_unlabels/unlabels/Vit.V.viniX400wF(4978)(0)A-23.png,equatorial_circular,0.8780051
+BD/BI_Cr_5/images_unlabels/unlabels/Vit.V.viniX400wF(4980)(0)C-2.png,polar_triangular,0.72166014
+BD/BI_Cr_5/images_unlabels/unlabels/Vit.V.viniX400wF(4981)(0)D-38.png,equatorial_circular,0.7981304
+BD/BI_Cr_5/images_unlabels/unlabels/Vit.V.viniX400wF(4982)(0)E-9.png,equatorial_alongada,0.5317656
+BD/BI_Cr_5/images_unlabels/unlabels/Vit.V.viniX400wF(4983)(0)F-14.png,polar_triangular,0.7536737
+BD/BI_Cr_5/images_unlabels/unlabels/Vit.V.viniX400wF(4983)(0)F-20.png,equatorial_circular,0.57831514
+BD/BI_Cr_5/images_unlabels/unlabels/Vit.V.viniX400wF(4983)(0)F-5.png,equatorial_circular,0.7602748
+BD/BI_Cr_5/images_unlabels/unlabels/Vit.V.viniX400wF(4984)(0)G-12.png,equatorial_alongada,0.4327293
+BD/BI_Cr_5/images_unlabels/unlabels/x40 f (4)-12.png,equatorial_circular,0.27141914
+BD/BI_Cr_5/images_unlabels/unlabels/x40 f (4)-14.png,equatorial_circular,0.5609669
+BD/BI_Cr_5/images_unlabels/unlabels/x40 f (5)-8.png,equatorial_circular,0.67177844
+BD/BI_Cr_5/images_unlabels/unlabels/x40 f (5)-9.png,polar_circular,0.43188676
+BD/BI_Cr_5/images_unlabels/unlabels/x40 f (7)-6.png,equatorial_eliptica,0.35906702

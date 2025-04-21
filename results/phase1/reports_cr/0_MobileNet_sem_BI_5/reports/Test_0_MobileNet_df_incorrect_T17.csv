@@ -1,0 +1,16 @@
+,file,y_true,y_pred,confidence,true_label,predicted_label,status
+3,BD/BI_Cr_5/labels/equatorial_circular/Fab.C.silX400wF(477)(0)C-9.png,1,4,0.5915219,equatorial_circular,polar_triangular,Incorrect
+7,BD/BI_Cr_5/labels/equatorial_alongada/Api.F.comX400wF(2136)(0)B-6.png,0,1,0.96572,equatorial_alongada,equatorial_circular,Incorrect
+11,BD/BI_Cr_5/labels/polar_circular/Oxa.O.pes.cX400wF(1738)(0)F-6.png,3,1,0.7061644,polar_circular,equatorial_circular,Incorrect
+18,BD/BI_Cr_5/labels/equatorial_circular/Fab.C.silX400wF(479)(0)E-13.png,1,4,0.8652954,equatorial_circular,polar_triangular,Incorrect
+20,BD/BI_Cr_5/labels/polar_tricircular/Eri.E.maniX400wF(5356)(0)B-18.png,5,4,0.54482895,polar_tricircular,polar_triangular,Incorrect
+22,BD/BI_Cr_5/labels/polar_circular/Lam.S.thyX400wF(944)(940)E-26.png,3,1,0.999726,polar_circular,equatorial_circular,Incorrect
+25,BD/BI_Cr_5/labels/equatorial_alongada/Api.F.comX400wF(2138)(0)D-10.png,0,1,0.9973385,equatorial_alongada,equatorial_circular,Incorrect
+30,BD/BI_Cr_5/labels/polar_triangular/Fab.C.silX400wF(480)(0)F-6.png,4,1,0.9859827,polar_triangular,equatorial_circular,Incorrect
+39,BD/BI_Cr_5/labels/equatorial_circular/Lam.S.triX400wF(2189)(0)B-26.png,1,3,0.9367507,equatorial_circular,polar_circular,Incorrect
+49,BD/BI_Cr_5/labels/equatorial_circular/Ole.O.euroX400wF(4261)(0)A-11.png,1,4,0.7873916,equatorial_circular,polar_triangular,Incorrect
+56,BD/BI_Cr_5/labels/equatorial_eliptica/Bra.S.albX400wF(2154)(0)E-9.png,2,4,0.98954916,equatorial_eliptica,polar_triangular,Incorrect
+65,BD/BI_Cr_5/labels/equatorial_circular/Vit.V.viniX400wF(4979)(0)B-24.png,1,4,0.97214276,equatorial_circular,polar_triangular,Incorrect
+77,BD/BI_Cr_5/labels/equatorial_circular/Lam.S.thyX400wF(942)(935)B-6.png,1,3,0.608171,equatorial_circular,polar_circular,Incorrect
+80,BD/BI_Cr_5/labels/equatorial_circular/Lam.S.thyX400wF(942)(935)B-8.png,1,3,0.99773633,equatorial_circular,polar_circular,Incorrect
+99,BD/BI_Cr_5/labels/polar_circular/Lam.S.thyX400wF(943)(990)C-6.png,3,1,0.9916156,polar_circular,equatorial_circular,Incorrect

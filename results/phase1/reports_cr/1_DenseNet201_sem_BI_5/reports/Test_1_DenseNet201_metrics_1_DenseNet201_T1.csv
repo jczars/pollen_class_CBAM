@@ -1,0 +1,2 @@
+,test_loss,test_accuracy,precision,recall,fscore,kappa
+0,0.29107731580734253,0.9268292784690857,0.933,0.927,0.927,0.905
