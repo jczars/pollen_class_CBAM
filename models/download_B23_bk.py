@@ -21,19 +21,18 @@ def download_database(url, output_file):
     """
     Downloads the ZIP file using wget, if the user agrees.
     """
-    print("[INFO] Starting Step 1: Downloading the database...")
     if os.path.exists(output_file):
-        print(f"[INFO] The file '{output_file}' already exists.")
+        print(f"The file '{output_file}' already exists.")
         if not ask_user("Do you want to download it again?"):
             return
 
     try:
         import subprocess
-        print(f"[INFO] Downloading the file '{output_file}'...")
+        print(f"Downloading the file '{output_file}'...")
         subprocess.run(["wget", "-O", output_file, url], check=True)
-        print(f"[INFO] Download completed: '{output_file}'.")
+        print(f"Download completed: '{output_file}'.")
     except Exception as e:
-        print(f"[ERROR] Error downloading the file: {e}")
+        print(f"Error downloading the file: {e}")
         exit(1)
 
 def extract_and_rename_zip(zip_path, target_dir, new_name):
@@ -41,12 +40,11 @@ def extract_and_rename_zip(zip_path, target_dir, new_name):
     Extracts the ZIP file content into a temporary folder, renames the folder, and organizes the images,
     if the user agrees.
     """
-    print("[INFO] Starting Step 2: Extracting and renaming the ZIP file...")
     extracted_dir = os.path.join(target_dir, new_name)
     temp_dir = os.path.join(target_dir, "temp_extract")
 
     if os.path.exists(extracted_dir) or os.path.exists(temp_dir):
-        print(f"[INFO] The folder '{new_name}' or '{temp_dir}' already exists.")
+        print(f"The folder '{new_name}' or '{temp_dir}' already exists.")
         if not ask_user("Do you want to extract it again?"):
             return extracted_dir if os.path.exists(extracted_dir) else temp_dir
 
@@ -55,28 +53,27 @@ def extract_and_rename_zip(zip_path, target_dir, new_name):
         os.makedirs(temp_dir, exist_ok=True)
 
         # Extract the ZIP file content into the temporary folder
-        print(f"[INFO] Extracting the file '{zip_path}' into '{temp_dir}'...")
+        print(f"Extracting the file '{zip_path}' into '{temp_dir}'...")
         with zipfile.ZipFile(zip_path, 'r') as zip_ref:
             zip_ref.extractall(temp_dir)
-        print(f"[INFO] Extraction completed in '{temp_dir}'.")
+        print(f"Extraction completed in '{temp_dir}'.")
 
         # Rename the temporary folder to the new name
         if os.path.exists(extracted_dir):
             shutil.rmtree(extracted_dir)  # Remove the folder if it already exists
         os.rename(temp_dir, extracted_dir)
-        print(f"[INFO] Folder renamed to '{new_name}'.")
+        print(f"Folder renamed to '{new_name}'.")
 
         return extracted_dir
     except Exception as e:
-        print(f"[ERROR] Error during extraction or renaming: {e}")
+        print(f"Error during extraction or renaming: {e}")
         exit(1)
 
 def organize_images_by_class(base_dir):
     """
     Organizes images into subfolders based on class names extracted from filenames.
     """
-    print("[INFO] Starting Step 3: Organizing images by class...")
-    print(f"[INFO] Organizing images in '{base_dir}' by class...")
+    print(f"Organizing images in '{base_dir}' by class...")
     for filename in os.listdir(base_dir):
         file_path = os.path.join(base_dir, filename)
 
@@ -92,7 +89,7 @@ def organize_images_by_class(base_dir):
             class_name = class_name.split('(')[0].strip()
 
             if not class_name:  # If the class name is invalid
-                print(f"[WARNING] Error extracting class name from file: {filename}")
+                print(f"Error extracting class name from file: {filename}")
                 continue
 
             # Create a subfolder for the class, if it doesn't exist
@@ -102,24 +99,23 @@ def organize_images_by_class(base_dir):
             # Move the file to the corresponding subfolder
             new_file_path = os.path.join(class_dir, filename)
             shutil.move(file_path, new_file_path)
-            print(f"[INFO] File '{filename}' moved to folder '{class_name}'.")
+            print(f"File '{filename}' moved to folder '{class_name}'.")
 
-    print("[INFO] Organization completed.")
+    print("Organization completed.")
 
 def clean_compressed_file(zip_file):
     """
     Asks the user whether to delete the compressed file after extraction.
     """
-    print("[INFO] Starting Step 4: Cleaning up the compressed file...")
     if os.path.exists(zip_file):
         if ask_user(f"Do you want to delete the compressed file '{zip_file}'?"):
             try:
                 os.remove(zip_file)
-                print(f"[INFO] Compressed file '{zip_file}' deleted successfully.")
+                print(f"Compressed file '{zip_file}' deleted successfully.")
             except Exception as e:
-                print(f"[ERROR] Error deleting the compressed file: {e}")
+                print(f"Error deleting the compressed file: {e}")
         else:
-            print("[INFO] The compressed file was not deleted.")
+            print("The compressed file was not deleted.")
 
 def main():
     # Define paths for the ZIP file and target directory
@@ -139,7 +135,7 @@ def main():
     # Step 4: Clean up the compressed file (optional)
     clean_compressed_file(zip_file)
 
-    print("[INFO] Processing completed!")
+    print("Processing completed!")
 
 if __name__ == "__main__":
     main()

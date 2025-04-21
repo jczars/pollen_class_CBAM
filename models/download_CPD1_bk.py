@@ -4,6 +4,7 @@ import argparse
 import re
 import cv2
 from tqdm import tqdm
+import sound_test_finished
 
 # Define the project directory and database directory
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Navigate up to the project root
@@ -104,18 +105,6 @@ def rename_classes(base_dir):
     if renamed_count == 0:
         print("No classes were found to rename. Ensure the directory structure and naming patterns are correct.")
 
-def clean_compressed_files(output_dir, compressed_file):
-    """Asks the user if they want to delete the compressed file and deletes it if confirmed."""
-    response = input("Do you want to delete the compressed file after extraction? (yes/no): ").strip().lower()
-    if response == "yes":
-        try:
-            os.remove(compressed_file)
-            print(f"Compressed file '{compressed_file}' deleted successfully.")
-        except Exception as e:
-            print(f"Error deleting the compressed file: {e}")
-    else:
-        print("Compressed file was not deleted.")
-
 def resize_images_in_place(src, target_size=(224, 224), file_type='png', verbose=0):
     """
     Verifies if images in the source directory have different sizes and resizes them to the target size (224x224).
@@ -179,6 +168,18 @@ def resize_images_in_place(src, target_size=(224, 224), file_type='png', verbose
     if verbose > 0:
         print("\nProcessing completed.")
 
+def clean_compressed_files(output_dir, compressed_file):
+    """Asks the user if they want to delete the compressed file and deletes it if confirmed."""
+    response = input("Do you want to delete the compressed file after extraction? (yes/no): ").strip().lower()
+    if response == "yes":
+        try:
+            os.remove(compressed_file)
+            print(f"Compressed file '{compressed_file}' deleted successfully.")
+        except Exception as e:
+            print(f"Error deleting the compressed file: {e}")
+    else:
+        print("Compressed file was not deleted.")
+
 def main():
     # Argument parser configuration
     parser = argparse.ArgumentParser(description="Script to download, extract, rename, and resize datasets.")
@@ -197,52 +198,41 @@ def main():
     # Define the output file name and target directory
     os.makedirs(DATABASE_DIR, exist_ok=True)  # Create the directory if it doesn't exist
     output_file = os.path.join(DATABASE_DIR, f"{args.database}.rar")
+    extracted_dir = os.path.join(DATABASE_DIR, args.database)
 
-    # Check if the database directory already exists
-    if file_exists(DATABASE_DIR, args.database):
-        print(f"The database '{args.database}' already exists in '{DATABASE_DIR}'.")
-        response = input("Do you want to overwrite it? (yes/no): ").strip().lower()
-        if response != "yes":
-            # Check if the classes are already renamed
-            if is_renamed(os.path.join(DATABASE_DIR, args.database)):
-                print("The classes are already renamed. Proceeding to resize images...")
-                resize_images_in_place(os.path.join(DATABASE_DIR, args.database), verbose=1)
-                exit(0)
-            else:
-                response_rename = input("The classes are not renamed. Do you want to rename them now? (yes/no): ").strip().lower()
-                if response_rename == "yes":
-                    rename_classes(os.path.join(DATABASE_DIR, args.database))
-                    resize_images_in_place(os.path.join(DATABASE_DIR, args.database), verbose=1)
-                    exit(0)
-                else:
-                    print("No changes were made.")
-                    exit(0)
+    # Step 1: Download the database (if not already downloaded)
+    if not file_exists(DATABASE_DIR, f"{args.database}.rar"):
+        print(f"Downloading the database '{args.database}'...")
+        download_with_wget(database_url, output_file)
+    else:
+        print(f"The database '{args.database}' is already downloaded.")
 
-    # Perform the download
-    print(f"Downloading the database '{args.database}'...")
-    download_with_wget(database_url, output_file)
+    # Step 2: Extract the database (if not already extracted)
+    if not file_exists(DATABASE_DIR, args.database):
+        print(f"Extracting the database '{args.database}'...")
+        extract_rar(output_file, DATABASE_DIR)
 
-    # Extract the file
-    print(f"Extracting the database '{args.database}'...")
-    extract_rar(output_file, DATABASE_DIR)
+        # Detect and rename the extracted directory
+        extracted_dir = get_extracted_directory(DATABASE_DIR)
+        extracted_dir = rename_extracted_directory(extracted_dir, args.database)
+    else:
+        print(f"The database '{args.database}' is already extracted.")
+        extracted_dir = os.path.join(DATABASE_DIR, args.database)
 
-    # Detect the extracted directory dynamically
-    extracted_dir = get_extracted_directory(DATABASE_DIR)
-    print(f"Detected extracted directory: '{extracted_dir}'")
+    # Step 3: Rename classes (if not already renamed)
+    if not is_renamed(extracted_dir):
+        print("The classes are not renamed. Proceeding to rename them...")
+        rename_classes(extracted_dir)
+    else:
+        print("The classes are already renamed.")
 
-    # Rename the extracted directory to the desired name
-    renamed_dir = rename_extracted_directory(extracted_dir, args.database)
-    print(f"Using renamed directory: '{renamed_dir}'")
-
-    # Rename the classes
-    rename_classes(renamed_dir)
-
-    # Resize the images
+    # Step 4: Resize images (if not already resized)
     print("Resizing images to 224x224...")
-    resize_images_in_place(renamed_dir, verbose=1)
+    resize_images_in_place(extracted_dir, verbose=1)
 
-    # Clean up the compressed file if requested
+    # Step 5: Clean up the compressed file (optional)
     clean_compressed_files(DATABASE_DIR, output_file)
+    sound_test_finished.beep(2)
 
 if __name__ == "__main__":
     main()
